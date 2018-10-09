@@ -1,6 +1,6 @@
 ## Description
 
-A simple frequency distribution over a dataset of cybersecurity students
+A simple frequency distribution over a dataset of cybersecurity students.
 
 ## Build
 
