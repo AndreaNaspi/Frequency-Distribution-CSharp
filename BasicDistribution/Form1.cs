@@ -30,7 +30,7 @@ namespace BasicDistribution
         {
             textFile.Text = "";
             listStudent = new LinkedList<Student>();
-            var file = File.ReadAllLines("Dataset.csv").Skip(1);
+            var file = File.ReadAllLines("../../../Dataset.csv").Skip(1);
             foreach(var line in file)
             {
                 String[] lineValues = line.Split(';');
