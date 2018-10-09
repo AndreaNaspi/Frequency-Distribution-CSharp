@@ -48,47 +48,65 @@ namespace BasicDistribution
             {
                 textDistribution.Text = "";
                 var orderedDict = getDict(distributionOn.Text.Trim()).OrderBy(x => x.Value);
-                foreach (var pair in orderedDict)
+
+                string actualValue = "";
+                switch (distributionOn.Text.Trim())
                 {
-                    switch (distributionOn.Text.Trim())
-                    {
-                        case "Age":
-                            textDistribution.Text += pair.Value + " student with age " + pair.Key + Environment.NewLine;
-                            break;
-                        case "Weight":
-                            textDistribution.Text += pair.Value + " student with weight " + pair.Key + Environment.NewLine;
-                            break;
-                        case "Height":
-                            textDistribution.Text += pair.Value + " student with height " + pair.Key + Environment.NewLine;
-                            break;
-                    }
+                    case "Age":
+                        actualValue = "age";
+                        break;
+                    case "Weight":
+                        actualValue = "weight";
+                        break;
+                    case "Height":
+                        actualValue = "height";
+                        break;
                 }
+
+                foreach (var pair in orderedDict)
+                    textDistribution.Text += pair.Value + " student with " + actualValue + " " + pair.Key + Environment.NewLine;
             }
         }
 
         private Dictionary<int, int> getDict(String keyOption)
         {
             Dictionary<int, int> dict = new Dictionary<int, int>();
-            foreach (var student in listStudent)
+            int actualKey = 0;
+            switch (keyOption)
             {
-                int actualKey = 0;
-                switch (keyOption)
-                {
-                    case "Age":
+                case "Age":
+
+                    foreach (var student in listStudent)
+                    {
                         actualKey = student.getAge();
-                        break;
-                    case "Weight":
+                        if (dict.ContainsKey(actualKey))
+                            dict[actualKey] += 1;
+                        else
+                            dict.Add(actualKey, 1);
+                    }
+                    break;
+                case "Weight":
+                    foreach (var student in listStudent)
+                    {
                         actualKey = student.getWeight();
-                        break;
-                    case "Height":
+                        if (dict.ContainsKey(actualKey))
+                            dict[actualKey] += 1;
+                        else
+                            dict.Add(actualKey, 1);
+                    }
+                    break;
+                case "Height":
+                    foreach (var student in listStudent)
+                    {
                         actualKey = student.getHeight();
-                        break;
-                }
-                if(dict.ContainsKey(actualKey))
-                    dict[actualKey] += 1;
-                else
-                    dict.Add(actualKey, 1);
+                        if (dict.ContainsKey(actualKey))
+                            dict[actualKey] += 1;
+                        else
+                            dict.Add(actualKey, 1);
+                    }
+                    break;
             }
+
             return dict;
         }
 
