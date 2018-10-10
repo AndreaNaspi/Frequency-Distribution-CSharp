@@ -41,8 +41,8 @@
             // 
             // loadFile
             // 
-            this.loadFile.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.loadFile, "loadFile");
+            this.loadFile.BackColor = System.Drawing.Color.Silver;
             this.loadFile.Name = "loadFile";
             this.loadFile.UseVisualStyleBackColor = false;
             this.loadFile.Click += new System.EventHandler(this.button1_Click);
@@ -59,8 +59,8 @@
             // 
             // frequencyDistribution
             // 
-            this.frequencyDistribution.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.frequencyDistribution, "frequencyDistribution");
+            this.frequencyDistribution.BackColor = System.Drawing.Color.Silver;
             this.frequencyDistribution.Name = "frequencyDistribution";
             this.frequencyDistribution.UseVisualStyleBackColor = false;
             this.frequencyDistribution.Click += new System.EventHandler(this.button2_Click);
