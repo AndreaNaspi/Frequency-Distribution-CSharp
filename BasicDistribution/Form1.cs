@@ -13,9 +13,7 @@ namespace BasicDistribution
 {
     public partial class Form1 : Form
     {
-        /*
-         * List of students from file Dataset.csv
-        */ 
+        // List of students from file Dataset.csv 
         private LinkedList<Student> listStudent;
 
         // Initialize all GUI components
@@ -99,7 +97,7 @@ namespace BasicDistribution
             {
                 /* Iterate over the students list and insert into the dictionary (age value, counter) pairs
                  * If the pair exist -> sum 1 to the counter
-                 * Else create new pair with (age value, 1) 
+                 * Else -> create new pair with (age value, 1) 
                  */
                 case "Age":
 
@@ -114,7 +112,7 @@ namespace BasicDistribution
                     break;
                 /* Iterate over the students list and insert into the dictionary (weight value, counter) pairs
                  * If the pair exist -> sum 1 to the counter
-                 * Else create new pair with (weight value, 1) 
+                 * Else -> create new pair with (weight value, 1) 
                  */
                 case "Weight":
                     foreach (var student in listStudent)
@@ -128,7 +126,7 @@ namespace BasicDistribution
                     break;
                 /* Iterate over the students list and insert into the dictionary (height value, counter) pairs
                  * If the pair exist -> sum 1 to the counter
-                 * Else create new pair with (height value, 1) 
+                 * Else -> create new pair with (height value, 1) 
                  */
                 case "Height":
                     foreach (var student in listStudent)
