@@ -2,6 +2,10 @@
 
 A simple frequency distribution over a dataset of cybersecurity students.
 
+## Requirements
+- Visual Studio 2017
+- .NET Framework 
+
 ## Build
 
 1. Download/Pull the project on your workspace folder of Visual Studio;
